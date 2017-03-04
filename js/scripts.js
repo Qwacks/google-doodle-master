@@ -16,18 +16,13 @@ var randNum = Math.floor(Math.random() * max);
 $('.random').attr('src', eval('img' + randNum));
 
 
-// Store SVG Points
+//store
 var google = $('svg').drawsvg({
-    duration: 1000,
-    stagger: 0
+  duration : 5000,
+  reverse : true,
+  stagger: 600,
+  
 });
 
-
-$('#stage').hover(
-    function () {
-        // Animate SVG Points
-        google.drawsvg('animate');
-        
-    }, function () {
-        google.fadeOut();
-});
+//animate
+google.drawsvg('animate');
